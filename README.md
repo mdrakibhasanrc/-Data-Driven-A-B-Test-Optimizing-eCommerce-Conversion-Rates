@@ -1,10 +1,8 @@
  ## Data-Driven A/B Test: Optimizing eCommerce Conversion Rates
 
  ## Portfolio Project Outline:
- 
- ## 1. Planning the A/B Test
- 
- ### 1.1 Project Goals:
+
+ ### 1. Project Goals:
  
         * The goal is to run an A/B test with the primary metric being conversion rate.
         
@@ -46,7 +44,7 @@
 
         Formula for Alternative Hypotheis: H0 : Conversion Rate (Control) = Conversion Rate (Variant)
         
-## Sample Size Calculation:  To calculate the required sample size per group:
+## 5. Sample Size Calculation:  To calculate the required sample size per group:
 
    Use statistical formulas to ensure sufficient sample size for reliable results.
 
@@ -62,3 +60,35 @@
    Significance level (α): 0.05
 
    Power (1−𝛽): 0.8.
+
+   ### Python Code for Calculate sample Size Group
+
+      ```
+       from scipy.stats import norm
+  
+       # Define parameters
+       baseline_conversion_rate = 0.05  # p1
+       expected_conversion_rate = 0.06  # p2
+       significance_level = 0.05  # alpha
+       power = 0.8  # 1 - beta
+       effect_size = expected_conversion_rate - baseline_conversion_rate  # MDE
+       
+       # Calculate z-scores
+       z_alpha = norm.ppf(1 - significance_level / 2)  # Two-tailed test
+       z_beta = norm.ppf(power)
+       
+       # Calculate variances
+       var_p1 = baseline_conversion_rate * (1 - baseline_conversion_rate)
+       var_p2 = expected_conversion_rate * (1 - expected_conversion_rate)
+       
+       # Sample size formula
+       sample_size_per_group = ((z_alpha + z_beta) ** 2 * (var_p1 + var_p2)) / (effect_size ** 2)
+       
+       # Output results
+       print(f"Required sample size per group: {int(sample_size_per_group)}")
+       print(f"Total sample size: {int(2 * sample_size_per_group)}")
+
+        ```
+
+
+   
