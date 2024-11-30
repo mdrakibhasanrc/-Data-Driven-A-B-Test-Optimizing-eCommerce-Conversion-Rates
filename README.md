@@ -51,6 +51,7 @@
    Formula for Sample Size:  ![Screenshot_1](https://github.com/user-attachments/assets/2e2e906e-3da8-41f0-960e-4ff00135a2f7)
 
 
+
    Baseline Conversion Rate ( p1 )= 5% (0.05)
 
    Expected Conversion Rate (p2)= 6% (0.01)
@@ -88,7 +89,37 @@
        print(f"Required sample size per group: {int(sample_size_per_group)}")
        print(f"Total sample size: {int(2 * sample_size_per_group)}")
 
-        ```
+   ### Output:
+   
+           ![Screenshot_2](https://github.com/user-attachments/assets/26f8f7c1-f94c-42c0-b3a6-54873c059fb7)
+
+## To calculate the number of days required to run an A/B test
+
+
+    Daily traffic per group: How many visitors are available per day for each variant (A and B)?
+    
+    Sample size per group: The total sample size calculated per group.
+    
+    Formula: Test Duration (in days) = Sample size per group / Daily traffic per group
+
+   ### Python Code:
+
+         def calculate_test_duration(sample_size_per_group, daily_traffic_per_group):
+         test_duration = sample_size_per_group / daily_traffic_per_group
+         return round(test_duration, 2)
+
+        # Inputs
+        sample_size_per_group = 8146  # From previous calculation
+        daily_traffic_per_group = 1000  # Example daily traffic
+        
+        # Calculate and display test duration
+        test_duration = calculate_test_duration(sample_size_per_group, daily_traffic_per_group)
+        print(f"Test duration: {test_duration} days")
+
+   ### OutPut:
+   
+   ![Screenshot_3](https://github.com/user-attachments/assets/1ef935c0-d6f6-4bb6-ad67-d741129e9a8d)
+
 
 
    
