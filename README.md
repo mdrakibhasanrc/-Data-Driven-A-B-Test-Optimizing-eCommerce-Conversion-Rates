@@ -2,14 +2,14 @@
 
  ## Portfolio Project Outline:
 
- ### 1. Project Goals:
+ ### Phase 1. Project Goals:
  
         * The goal is to run an A/B test with the primary metric being conversion rate.
         
         * Secondary metrics will help validate if the changes made (e.g., add to cart button color for product page ) 
           affect user behavior in unintended ways.
 
- ### 2. Primary Metric: Conversion Rate
+ ### Phase 2. Primary Metric: Conversion Rate
  
         Formula: Conversion Rate = Conversions / Visitors
         
@@ -17,7 +17,7 @@
 
         Baseline Conversion Rate: 5%
 
- ### 3. Secondary Metrics (based on conversion rate):
+ ### Phase 3. Secondary Metrics (based on conversion rate):
          These metrics will give deeper insights into user behavior and ensure there are no negative side effects 
          on other important aspects of the website.
           
@@ -34,7 +34,7 @@
          * Exit Rate: Percentage of users who leave the site after visiting a specific page.
          
 
-## 4. Hypothesis Generate:
+## Phase 4. Hypothesis Generate:
 
         Null Hypothesis (H₀): There is no significant difference in conversion rates between the Control and Variant groups.
 
@@ -44,7 +44,7 @@
 
         Formula for Alternative Hypotheis: H0 : Conversion Rate (Control) = Conversion Rate (Variant)
         
-## 5. Sample Size Calculation:  To calculate the required sample size per group:
+## Phase 5. Sample Size Calculation:  To calculate the required sample size per group:
 
    Use statistical formulas to ensure sufficient sample size for reliable results.
 
@@ -93,7 +93,7 @@
    
       ![Screenshot_2](https://github.com/user-attachments/assets/26f8f7c1-f94c-42c0-b3a6-54873c059fb7)
 
-## 6. To calculate the number of days required to run an A/B test
+## Phase 6. To calculate the number of days required to run an A/B test
 
 
     Daily traffic per group: How many visitors are available per day for each variant (A and B)?
@@ -119,6 +119,16 @@
    ### OutPut:
    
    ![Screenshot_3](https://github.com/user-attachments/assets/1ef935c0-d6f6-4bb6-ad67-d741129e9a8d)
+
+## Phase 7: After A/B Test Running Then Data Analysis
+
+After completing the A/B test, the next step is to analyze the data to determine the effectiveness of the changes 
+implemented in the Variant group. This analysis will help assess whether the observed differences in key metrics,
+such as conversion rate and secondary metrics, are statistically significant and aligned with business objectives.
+
+
+
+
 
 
 
