@@ -93,7 +93,7 @@
    
       ![Screenshot_2](https://github.com/user-attachments/assets/26f8f7c1-f94c-42c0-b3a6-54873c059fb7)
 
-## To calculate the number of days required to run an A/B test
+## 6. To calculate the number of days required to run an A/B test
 
 
     Daily traffic per group: How many visitors are available per day for each variant (A and B)?
