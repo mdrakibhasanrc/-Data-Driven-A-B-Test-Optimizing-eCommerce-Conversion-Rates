@@ -1,23 +1,23 @@
- ## Data-Driven A/B Test: Optimizing eCommerce Conversion Rates
+ ## Data-Driven A/B Test Design For Increase eCommerce Conversion Rates
 
- ## Portfolio Project Outline:
+ ## Step-by-Step Test Design Process
 
- ### Phase 1. Project Goals:
+ ### Phase 1. Define Test Objective:
  
-        * The goal is to run an A/B test with the primary metric being conversion rate.
+        * Goal: Improve the website’s conversion rate by 15%.
         
-        * Secondary metrics will help validate if the changes made (e.g., add to cart button color for product page ) 
-          affect user behavior in unintended ways.
+        * Focus Area: Product page layout.
 
- ### Phase 2. Primary Metric: Conversion Rate
+ ### Phase 2. Primary or Sucess Metric: Conversion Rate
  
         Formula: Conversion Rate = Conversions / Visitors
         
         This is the main metric to evaluate whether the new variant performs better than the control.
 
-        Baseline Conversion Rate: 5%
+        Baseline Conversion Rate: 10%
+        
 
- ### Phase 3. Secondary Metrics (based on conversion rate):
+### Phase 3. Secondary Metrics (based on conversion rate):
          These metrics will give deeper insights into user behavior and ensure there are no negative side effects 
          on other important aspects of the website.
           
@@ -34,17 +34,37 @@
          * Exit Rate: Percentage of users who leave the site after visiting a specific page.
          
 
-## Phase 4. Hypothesis Generate:
+## Phase 4. Formulate Hypothesis:
 
-        Null Hypothesis (H₀): There is no significant difference in conversion rates between the Control and Variant groups.
+         Hypothesis: "Adding trust badges near the 'Buy Now' button will reduce user hesitation and increase purchases."
+
+
+## Phase 5. Determine Variable to Test:
+
+         Control Group (A): Current product page layout without trust badges.
+
+         Variation Group (B): Product page layout with prominently displayed trust badges near the 'Buy Now' button.
+
+ 
+## Phase 6. Hypothesis Generate:
+
+        Null Hypothesis (H₀): There is no significant difference in conversion rates between the Control group A and Variant groups B.
 
         Formula for Null Hypotheis: H0 : Conversion Rate (Control) = Conversion Rate (Variant)
 
-        Alternative Hypothesis (H₁): There is a significant difference in conversion rates between the Control and Variant groups.
+        Alternative Hypothesis (H₁): There is a significant difference in conversion rates between the Control group A and Variant groups B.
 
         Formula for Alternative Hypotheis: H0 : Conversion Rate (Control) = Conversion Rate (Variant)
         
-## Phase 5. Sample Size Calculation:  To calculate the required sample size per group:
+        
+## Phase 7. Audience and Segmentation:
+
+    Target audience: All website visitors on the product page.
+
+    Traffic split: 50% of users assigned to Control (A) and 50% to Variation (B).
+        
+        
+## Phase 8. Calculate Sample Size - To calculate the required sample size per group:
 
    Use statistical formulas to ensure sufficient sample size for reliable results.
 
@@ -52,9 +72,9 @@
 
 
 
-   Baseline Conversion Rate ( p1 )= 5% (0.05)
+   Baseline Conversion Rate ( p1 )= 10%
 
-   Expected Conversion Rate (p2)= 6% (0.01)
+   Expected Conversion Rate (p2)= 15% 
 
    Minimum detectable effect (MDE): 1% increase 
 
@@ -93,7 +113,7 @@
    
       ![Screenshot_2](https://github.com/user-attachments/assets/26f8f7c1-f94c-42c0-b3a6-54873c059fb7)
 
-## Phase 6. To calculate the number of days required to run an A/B test
+## Phase 9. Test Duration: To calculate the number of days required to run an A/B test
 
 
     Daily traffic per group: How many visitors are available per day for each variant (A and B)?
@@ -120,14 +140,22 @@
    
    ![Screenshot_3](https://github.com/user-attachments/assets/1ef935c0-d6f6-4bb6-ad67-d741129e9a8d)
 
-## Phase 7: After A/B Test Running Then Data Analysis
+   
+## Phase 10:  Develop Variations
 
-After completing the A/B test, the next step is to analyze the data to determine the effectiveness of the changes 
-implemented in the Variant group. This analysis will help assess whether the observed differences in key metrics,
-such as conversion rate and secondary metrics, are statistically significant and aligned with business objectives.
+        Control (A): Current product page without trust badges.
 
+        Variation (B): New design featuring trust badges near the CTA button, highlighting security and satisfaction guarantees.
 
+## Phase 11:  Launch the Test
 
+        Roll out the test to 100% of the defined audience.
+
+        Monitor performance daily to ensure:
+
+               No technical issues.
+
+               Balanced traffic distribution.
 
 
 
