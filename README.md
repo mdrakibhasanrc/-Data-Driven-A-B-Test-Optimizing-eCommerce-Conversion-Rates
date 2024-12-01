@@ -83,18 +83,43 @@
    ### Python Code for Calculate sample Size Group
 
       ```
-       from scipy.stats import norm
+       import numpy as np
+       import pandas as pd
+       import scipy.stats as stats
+       import math
   
        # Define parameters
-       baseline_conversion_rate = 0.05  # p1
-       expected_conversion_rate = 0.06  # p2
-       significance_level = 0.05  # alpha
-       power = 0.8  # 1 - beta
-       effect_size = expected_conversion_rate - baseline_conversion_rate  # MDE
+       p1=0.1 #baseline conversion rate 10%
+       mde=0.15 # 15% improvment
+       new=mde*p1 # calculation: new= MDE * Baseline conversion rate
+       p2= new + p1 # New conversion rate after MDE
        
-       # Calculate z-scores
-       z_alpha = norm.ppf(1 - significance_level / 2)  # Two-tailed test
-       z_beta = norm.ppf(power)
+       
+       # Significance level and Power
+       
+       alpha=0.05 # significance level 95%
+       power=0.8 #power 80%
+       
+       # Z score for significance level and Power
+       
+       z_alpha=stats.norm.ppf(1-alpha/2)
+       z_beta=stats.norm.ppf(power)
+       
+       print(f"BaseLine Conversion rate {p1}")
+       print(f"Want to Improvment {mde}")
+       print(f"New Conversion rate after MDE {p2}")
+       print(f"Significance Level {alpha}")
+       print(f"Power {power}")
+       print(f"Z score for significance level{z_alpha}")
+       print(f"Z score for power {power}")
+       
+       # Calculate Sample Size
+       numerator=((z_alpha+z_beta)**2)*(p1*(1-p1)+p2*(1-p2))
+       demerator=(p2-p1)**2
+       sample_size_per_group=numerator/demerator
+       sample_size_per_group = math.ceil(sample_size_per_group)
+       Total_Sample_size=sample_size_per_group*2
+       print(f"Sample Size need for AB Test {Total_Sample_size}")
        
        # Calculate variances
        var_p1 = baseline_conversion_rate * (1 - baseline_conversion_rate)
@@ -109,7 +134,8 @@
 
    ### Output:
    
-      ![Screenshot_2](https://github.com/user-attachments/assets/26f8f7c1-f94c-42c0-b3a6-54873c059fb7)
+   ![Screenshot_1](https://github.com/user-attachments/assets/a63b327a-a654-4f96-b586-d645602e0d8c)
+
 
 ## Phase 9. Test Duration: To calculate the number of days required to run an A/B test
 
@@ -122,21 +148,16 @@
 
    ### Python Code:
 
-         def calculate_test_duration(sample_size_per_group, daily_traffic_per_group):
-         test_duration = sample_size_per_group / daily_traffic_per_group
-         return round(test_duration, 2)
-
-        # Inputs
-        sample_size_per_group = 8146  # From previous calculation
-        daily_traffic_per_group = 1000  # Example daily traffic
-        
-        # Calculate and display test duration
-        test_duration = calculate_test_duration(sample_size_per_group, daily_traffic_per_group)
-        print(f"Test duration: {test_duration} days")
+          daily_traffic=1500 # your website current daily trafficTot
+          Total_Sample_size # previous calculation
+          test_duration= Total_Sample_size/daily_traffic
+          test_duration = math.ceil(test_duration)  # Round up to the next whole day
+          print(f"Test Duration: {test_duration} days")
 
    ### OutPut:
    
-   ![Screenshot_3](https://github.com/user-attachments/assets/1ef935c0-d6f6-4bb6-ad67-d741129e9a8d)
+  ![Screenshot_2](https://github.com/user-attachments/assets/323b5953-ec78-451e-8545-13bcfa2fcc37)
+
 
    
 ## Phase 10:  Develop Variations
