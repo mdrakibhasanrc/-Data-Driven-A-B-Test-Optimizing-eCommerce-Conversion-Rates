@@ -120,13 +120,7 @@
        sample_size_per_group = math.ceil(sample_size_per_group)
        Total_Sample_size=sample_size_per_group*2
        print(f"Sample Size need for AB Test {Total_Sample_size}")
-       
-       # Calculate variances
-       var_p1 = baseline_conversion_rate * (1 - baseline_conversion_rate)
-       var_p2 = expected_conversion_rate * (1 - expected_conversion_rate)
-       
-       # Sample size formula
-       sample_size_per_group = ((z_alpha + z_beta) ** 2 * (var_p1 + var_p2)) / (effect_size ** 2)
+      
        
        # Output results
        print(f"Required sample size per group: {int(sample_size_per_group)}")
