@@ -72,15 +72,13 @@
 
 
 
-   Baseline Conversion Rate ( p1 )= 10%
+   Baseline Conversion Rate ( p0 )= 10%
 
-   Expected Conversion Rate (p2)= 15% 
+   Minimum detectable effect (MDE): 15% increase 
 
-   Minimum detectable effect (MDE): 1% increase 
+   Significance level (α): 5%
 
-   Significance level (α): 0.05
-
-   Power (1−𝛽): 0.8.
+   Power (1−𝛽): 80%
 
    ### Python Code for Calculate sample Size Group
 
@@ -147,7 +145,17 @@
 
         Variation (B): New design featuring trust badges near the CTA button, highlighting security and satisfaction guarantees.
 
-## Phase 11:  Launch the Test
+## Phase 11:   Conduct Quality Assurance (QA)
+
+       Test both Control and Variation on multiple devices and browsers to ensure:
+       
+              Correct rendering of changes.
+
+             Proper event tracking (e.g., clicks and purchases).
+
+     
+
+## Phase 12:  Launch the Test
 
         Roll out the test to 100% of the defined audience.
 
